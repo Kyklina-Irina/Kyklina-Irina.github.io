@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Куклина Ирина - Портфолио</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            height: 100vh;
+            perspective: 1px;
+        }
+
+        .parallax-container {
+            position: relative;
+            height: 100vh;
+            overflow-x: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="10" cy="10" r="0.5" fill="white"/><circle cx="30" cy="70" r="0.3" fill="white"/><circle cx="80" cy="20" r="0.4" fill="white"/></svg>');
+            background-size: cover;
+            z-index: -1;
+            transform: translateZ(-1px) scale(2);
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #0ff;
+            text-shadow: 0 0 10px rgba(0,255,255,0.7);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f0f;
+            text-shadow: 0 0 10px rgba(255,0,255,0.7);
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .section h3 {
+            color: #ff0;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-shadow: 0 0 5px rgba(255,255,0,0.5);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #0ff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* 3D Geometric Shapes */
+        .shape {
+            position: absolute;
+            opacity: 0.6;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+        }
+
+        .cube {
+            width: 40px;
+            height: 40px;
+            background: #f0f;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateY(45deg);
+            animation: cubeRotate 20s infinite linear;
+        }
+
+        @keyframes cubeRotate {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        .sphere {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #0ff, #00a);
+            animation: sphereFloat 25s infinite ease-in-out;
+        }
+
+        @keyframes sphereFloat {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-50px) translateX(30px); }
+            50% { transform: translateY(0) translateX(60px); }
+            75% { transform: translateY(50px) translateX(30px); }
+        }
+
+        .pyramid {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #ff0;
+            animation: pyramidSpin 18s infinite linear;
+        }
+
+        @keyframes pyramidSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="parallax-container">
+    <div class="parallax-bg"></div>
+    
+    <!-- Floating 3D shapes -->
+    <div class="shape cube" style="top: 10%; left: 15%;"></div>
+    <div class="shape sphere" style="top: 30%; right: 20%;"></div>
+    <div class="shape pyramid" style="bottom: 20%; left: 25%;"></div>
+    <div class="shape cube" style="top: 60%; right: 30%;"></div>
+    <div class="shape sphere" style="bottom: 10%; right: 10%;"></div>
+    <div class="shape pyramid" style="top: 40%; left: 80%;"></div>
+
+    <div class="content">
+        <h1>Куклина Ирина</h1>
+        <h2>Специалист в области тестирования и ИИ</h2>
+        
+        <div class="intro">
+            <p>Привет! Я Ирина, начинающий специалист в сфере тестирования программного обеспечения. Увлекаюсь изучением искусственного интеллекта и автоматизацией тестирования. Имею опыт работы с Java, Selenide, JUnit, Maven/Gradle и Git.</p>
+        </div>
+
+        <div class="section">
+            <h3>Образование и Курсы</h3>
+            <p>2025 - Инженер по тестированию (ООО Нетология)</p>
+            <p>2005-2007 - Неоконченное высшее (СибГАУ), специальность "Автоматизированные системы обработки информации и управления"</p>
+        </div>
+
+        <div class="section">
+            <h3>Навыки</h3>
+            <div class="skills-container">
+                <div class="skill">Java</div>
+                <div class="skill">Selenide</div>
+                <div class="skill">JUnit 5</div>
+                <div class="skill">Maven</div>
+                <div class="skill">Git</div>
+                <div class="skill">Test Automation</div>
+                <div class="skill">CI/CD</div>
+                <div class="skill">AI Basics</div>
+            </div>
+        </div>
+
+        <div class="section contact-info">
+            <h3>Контакты</h3>
+            <p>Телефон: <a href="tel:+79080251938">+7 (908) 025-19-38</a></p>
+            <p>Email: <a href="mailto:89080251938@yandex.com">89080251938@yandex.com</a></p>
+            <p>GitHub: <a href="https://github.com/Kyklina-Irina" target="_blank">github.com/Kyklina-Irina</a></p>
+            <p>Город: Ачинск, Россия</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

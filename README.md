@@ -1,24 +1,35 @@
-# 🌐 Personal Website & Portfolio
+# 🌐 Kyklina-Irina.github.io
 
-Это исходный код моего личного сайта-визитки, размещенного с помощью **GitHub Pages**.
+Персональный сайт-визитка, развернутый на **GitHub Pages**.
 
-🔗 **Посмотреть живой сайт:** [kyklina-irina.github.io](https://kyklina-irina.github.io/)  
-🔗 **Полное QA Портфолио:** [Portfolio-Kyklina-Irina](https://kyklina-irina.github.io/Portfolio-Kyklina-Irina/)
+🔗 **Ссылка на сайт:** [kyklina-irina.github.io](https://kyklina-irina.github.io/)
 
-## 🛠 Технологический стек
+## 📋 Описание
 
-- **HTML5** (семантическая верстка)
-- **CSS3** (адаптивный дизайн, Flexbox/Grid)
-- **Vanilla JavaScript** (интерактивность, переключение языков RU/EN)
-- **GitHub Pages** (хостинг и CI/CD)
+Репозиторий содержит исходный код моего персонального сайта-визитки.
+Имя репозитория совпадает с именем пользователя GitHub, поэтому он
+работает как корневой сайт GitHub Pages.
 
-## 💡 О проекте
+На сайте представлена информация обо мне как о специалисте:
+навыки, образование, контакты и ссылки на проекты.
 
-Сайт служит главной точкой входа для рекрутеров и коллег. Здесь собрана информация обо мне, мои контакты и ссылки на мои лучшие проекты в области QA Automation (Java, Selenide) и Pet-проекты. 
+## 🛠 Стек
 
-Сайт полностью адаптивен и корректно отображается как на десктопах, так и на мобильных устройствах.
+- HTML5
+- CSS3
+- GitHub Pages (автоматический деплой)
+
+## 🚀 Как это работает
+
+1. Код коммитится в ветку `main`
+2. GitHub Pages автоматически публикует сайт
+3. Сайт доступен по адресу https://kyklina-irina.github.io/
 
 ## 👤 Автор
 
-**Куклина Ирина** | *Junior QA Automation Engineer*  
-📫 Telegram: [@Irina1704](https://t.me/Irina1704)
+**Куклина Ирина**
+*Junior QA Automation Engineer*
+
+📫 **Контакты:**
+- **Telegram:** [@Irina1704](https://t.me/Irina1704)
+- **GitHub:** [Kyklina-Irina](https://github.com/Kyklina-Irina)
